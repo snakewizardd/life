@@ -4,3 +4,4 @@
 start.sh
 .Rhistory 
 .sh_history
+.env
