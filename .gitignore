@@ -1,3 +1,5 @@
 /.vs
-Dockerfile
-docker-compose.yaml
+/.local
+/.config
+start.sh
+.Rhistory

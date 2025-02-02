@@ -1,29 +1,28 @@
-**Conway's Game of Life Animation using R**
+## R Browser-Based Animation & Visualization Workspace
 
-This repository contains a script in R language that simulates the famous cellular automaton, Conway's Game of Life. The script generates a GIF animation of the game's evolution over a specified number of iterations.
+This project is all about creating a browser-accessible workspace for R animations and visualizations. It runs inside a containerized environment using Docker and Docker Compose, making it reproducible and easy to set up anywhere. The goal is to have a smooth experience for developing and sharing R-based graphics, animations, and data visualizations without dealing with dependency headaches.
 
-**How to use**
+### What's Inside?
+It's built on top of `rocker/rstudio`, so you get RStudio in the browser with all the necessary libraries for animation and graphics. It includes `ggplot2`, `gganimate`, `gifski`, and more, making it easy to experiment with dynamic and interactive visualizations. The stack also includes Rust and Cargo, in case you want to optimize performance with compiled code.
 
-1. Clone the repository onto your local machine using `git clone https://github.com/your-username/gptconway.R.git`
-2. Navigate to the repository directory using `cd gptconway.R`
-3. Run the script using `Rscript gptconway.R` (make sure you have R and Rscript installed on your system)
-4. The script will generate a GIF animation named `conways_game_of_life.gif` in a directory named `outputs` in your current working directory
+### Getting Started
+To spin up the environment, just clone the repo and run:
 
-**Technical Details**
+```sh
+docker-compose up --build
+```
 
-* The script uses the `dplyr`, `ggplot2`, `gganimate`, and `gifski` packages for data manipulation, visualization, and animation.
-* The game is initialized with a random grid of 50x50 cells, with 20% chance of starting alive.
-* The `next_gen` function implements the rules of Conway's Game of Life, where a live cell dies if it has less than 2 or more than 3 live neighbors, and a dead cell becomes live if it has exactly 3 live neighbors.
-* The script collects the grid data over a specified number of iterations (100 in this case) and creates a data frame for each iteration.
-* The data frames are then combined and used to create a ggplot animation using `gganimate`.
-* The animation is saved as a GIF file using `gifski`.
+Then, head to `http://localhost:8787` in your browser, and you're good to go. Authentication is disabled for convenience in local development.
 
-**Future Improvements**
+### Why Docker?
+Reproducibility. No more fighting with system dependencies. If it works on your machine, it'll work on anyone else's with just a `docker-compose up`.
 
-* Implement user input for customizing the grid size, starting conditions, and number of iterations.
-* Modify the animation to include additional visualizations, such as grid edges or grid boundaries.
-* Experiment with different game rules or variations to create new and interesting patterns.
+### Example: Conway’s Game of Life
+One of the animations in this project is an implementation of Conway’s Game of Life using `ggplot2` and `gganimate`. It generates a grid-based simulation, animating how cells evolve over time according to the classic rules.
 
-**Acknowledgments**
+Once you're inside the container, you can run the script to generate a GIF of the simulation, saved in the `outputs` folder.
 
-Conway's Game of Life is a well-known cellular automaton first proposed by British mathematician John Horton Conway in the 1970s. This script is inspired by the original concept and implementation, and is intended for educational and recreational purposes only.
+---
+
+Built with love for reproducibility and creative R visualizations.
+

@@ -7,7 +7,7 @@ library(gifski)
 # Set up the grid dimensions and number of iterations
 nrow <- 50
 ncol <- 50
-iterations <- 100
+iterations <- 2500
 
 # Function to generate a Sierpinski triangle fractal pattern (with enough density to evolve)
 generate_sierpinski <- function(nrow, ncol) {
