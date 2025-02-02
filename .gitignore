@@ -2,4 +2,5 @@
 /.local
 /.config
 start.sh
-.Rhistory
+.Rhistory 
+.sh_history
