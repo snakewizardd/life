@@ -8,3 +8,4 @@ start.sh
 .python_history
 /.pyenv
 /.cache
+.Rhistory
