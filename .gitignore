@@ -6,3 +6,4 @@ start.sh
 .sh_history
 .env
 .python_history
+/.pyenv
