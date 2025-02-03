@@ -5,3 +5,4 @@ start.sh
 .Rhistory 
 .sh_history
 .env
+.python_history
