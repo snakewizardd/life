@@ -38,4 +38,7 @@ RUN  yes | sudo apt install libudunits2-dev
 
 RUN R -e "install.packages('transformr', repos ='http://cran.rstudio.com/')"
 
+RUN  yes | sudo apt install libglpk-dev
+
+
 EXPOSE 8787

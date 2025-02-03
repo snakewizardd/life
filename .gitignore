@@ -7,3 +7,4 @@ start.sh
 .env
 .python_history
 /.pyenv
+/.cache
